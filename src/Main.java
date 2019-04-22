@@ -2,8 +2,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        zad1();
-        zad2();
+//        zad1();
+//        zad2();
+        zad3();
 
     }
 
@@ -13,19 +14,19 @@ public class Main {
 
         switch (dzien){
             case 1: System.out.print("poniedzialek");
-            break;
+                break;
             case 2: System.out.print("wtorek");
-            break;
+                break;
             case 3: System.out.print("sroda");
-            break;
+                break;
             case 4: System.out.print("czwartek");
-            break;
+                break;
             case 5: System.out.print("piatek");
-            break;
+                break;
             case 6: System.out.print("sobota");
-            break;
+                break;
             case 7: System.out.print("niedziela");
-            break;
+                break;
             default: System.out.print("bledny numer dnia!");
 
         }
@@ -41,22 +42,42 @@ public class Main {
             case "grudzien":
             case "styczen":
             case "luty": System.out.print("zima");
-            break;
+                break;
             case "marzec":
             case "kwiecien":
             case "maj": System.out.print("wiosna");
-            break;
+                break;
             case "czerwiec":
             case "lipiec":
             case "sierpien": System.out.print("lato");
-            break;
+                break;
             case "wrzesien":
             case "pazdziernik":
             case "listopad": System.out.print("jesien");
-            break;
+                break;
             default: System.out.print("nieprawidlowy miesiac");
 
         }
+
+    }
+
+    public static void zad3(){
+
+        char znak = '*';
+        double x = 2;
+        double y = 4;
+
+        switch (znak){
+            case '+': System.out.print(x+y);
+            break;
+            case '-': System.out.print(x-y);
+            break;
+            case '*': System.out.print(x*y);
+            break;
+            case '/': System.out.print(x/y);
+            break;
+            default: System.out.print("nieznany znak!");
+            }
 
     }
 
