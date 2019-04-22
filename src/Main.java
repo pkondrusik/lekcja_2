@@ -6,8 +6,8 @@ public class Main {
 //        zad2();
 //        zad3();
 //        zad4();
-        zad5();
-
+//        zad5();
+        zad6();
     }
 
     public static void zad1(){
@@ -111,6 +111,19 @@ public class Main {
             System.out.print(tablica2[i] + " ");
 
 
+    }
+
+    public static void zad6(){
+        int n = 137;
+        boolean pierwsza = true;
+
+        for (int i = 2; i < n; i++)
+            if (n % i == 0) pierwsza = false;
+
+        if (pierwsza==true)
+            System.out.println("pierwsza");
+        else
+            System.out.println("nie pierwsza");
     }
 
 }
