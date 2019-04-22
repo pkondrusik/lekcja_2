@@ -3,6 +3,7 @@ public class Main {
     public static void main(String[] args) {
 
         zad1();
+        zad2();
 
     }
 
@@ -29,6 +30,33 @@ public class Main {
 
         }
 
+
+    }
+
+    public static void zad2(){
+
+        String miesiac = "listopad";
+
+        switch (miesiac){
+            case "grudzien":
+            case "styczen":
+            case "luty": System.out.print("zima");
+            break;
+            case "marzec":
+            case "kwiecien":
+            case "maj": System.out.print("wiosna");
+            break;
+            case "czerwiec":
+            case "lipiec":
+            case "sierpien": System.out.print("lato");
+            break;
+            case "wrzesien":
+            case "pazdziernik":
+            case "listopad": System.out.print("jesien");
+            break;
+            default: System.out.print("nieprawidlowy miesiac");
+
+        }
 
     }
 
