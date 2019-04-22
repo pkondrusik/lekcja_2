@@ -7,7 +7,8 @@ public class Main {
 //        zad3();
 //        zad4();
 //        zad5();
-        zad6();
+//        zad6();
+        zad7();
     }
 
     public static void zad1(){
@@ -124,6 +125,17 @@ public class Main {
             System.out.println("pierwsza");
         else
             System.out.println("nie pierwsza");
+    }
+
+
+    public static void zad7(){
+        int[][] tablica = new int [10][10];
+
+        for (int i = 1; i < tablica.length+1; i++) {
+            for (int j = 1; j < tablica[0].length+1; j++)
+                System.out.print((i) * (j) + " ");
+            System.out.print("\n");
+        }
     }
 
 }
