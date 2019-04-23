@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -14,7 +16,10 @@ public class Main {
 
     public static void zad1(){
 
-        int dzien = 3;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Podaj liczbe (numer dnia tygodnia):");
+        int dzien = scan.nextInt();
 
         switch (dzien){
             case 1: System.out.print("poniedzialek");
@@ -38,7 +43,10 @@ public class Main {
 
     public static void zad2(){
 
-        String miesiac = "listopad";
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Podaj miesiac (male litery, bez polskich znakow):");
+        String miesiac = scan.nextLine();
 
         switch (miesiac){
             case "grudzien":
@@ -64,9 +72,16 @@ public class Main {
 
     public static void zad3(){
 
-        char znak = '*';
-        double x = 2;
-        double y = 4;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Podaj znak dzialania +, -, * lub /");
+        char znak = scan.nextLine().charAt(0);
+
+        System.out.println("Podaj pierwsza liczbe:");
+        double x = scan.nextDouble();
+
+        System.out.println("Podaj druga liczbe:");
+        double y = scan.nextDouble();
 
         switch (znak){
             case '+': System.out.print(x+y);
@@ -84,11 +99,22 @@ public class Main {
 
     public static void zad4(){
 
-        int[] tablica = {1,2,3};
+        Scanner scan = new Scanner(System.in);
 
-        System.out.println(tablica[0]);
-        System.out.println(tablica[1]);
-        System.out.println(tablica[2]);
+        int[] tablica = new int[3];
+
+        for (int i = 1; i <= tablica.length; i++) {
+            System.out.println("Podaj " + i + " element tablicy:");
+            tablica[i-1] = scan.nextInt();
+        }
+
+        System.out.println("podana tablica to: ");
+
+        for (int i = 0; i < tablica.length; i++)
+            System.out.print(tablica[i] + " ");
+
+        System.out.println();
+
     }
 
     public static void zad5(){
@@ -110,16 +136,20 @@ public class Main {
 
     public static void zad6(){
 
-        int n = 137;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("podaj liczbe, zeby sprawdzic czy jest liczba pierwsza: ");
+
+        int n = scan.nextInt();
         boolean pierwsza = true;
 
         for (int i = 2; i < n; i++)
             if (n % i == 0) pierwsza = false;
 
         if (pierwsza)
-            System.out.println("pierwsza");
+            System.out.println(n + " jest liczba pierwsza");
         else
-            System.out.println("nie pierwsza");
+            System.out.println(n + "nie jest liczba pierwsza");
     }
 
 
@@ -136,7 +166,10 @@ public class Main {
 
     public static void zad8(){
 
-        int n = 3;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Podaj wysokosc choinki: ");
+        int n = scan.nextInt();
 
         for (int i = 0; i < n; i++){
             for (int j = 0; j < n * 2; j++)
